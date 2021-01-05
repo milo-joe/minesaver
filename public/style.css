@@ -1,0 +1,97 @@
+:root{
+    --body: #fff1e6;
+    --conatiner: #cb997e;
+    --input-back: #F0EFEB;
+    --button: #FFF1E6;
+    --backcolor: #FFF1E6;
+    --date-color: #9bf6ff;
+}
+body{
+    background-color: var(--body);
+}
+
+#form-container{
+    width: 400px;
+    height: auto;
+    padding: 8px;
+    background-color: var(--conatiner);
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    border: 0;
+    border-radius: 5px;
+}
+
+input{
+    background-color: var(--input-back);
+    border: 0;
+    border-radius: 5px;
+    height: 30px;
+}
+
+input:focus{
+    outline: none;
+}
+
+#input-holder{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 5px;
+}
+
+#sub-btn{
+    background-color: var(--button);
+    border: 0;
+    border-radius: 8px;
+    width: 80px;
+}
+
+.container{
+    margin: auto;
+    margin-top: 18px;
+    background-color: var(--conatiner);
+    width: 40%;
+    border: 1px solid brown;
+    border-radius: 8px;
+
+}
+
+.item-container{
+    margin: auto;
+    padding: 8px;
+    border-bottom: 1px dashed black;
+    position: relative;
+
+}
+
+.row{
+    margin: auto;
+    width: 400px;
+    display: flex;
+    justify-content: space-between;
+    padding: 5px;
+}
+
+.pos{
+    border-radius: 8px;
+    width: 180px;
+    height: 25px;
+    padding: 5px;
+    background-color: var(--backcolor);
+}
+
+.desc{
+    margin: 5px auto;
+    width: 400px;
+    background-color: var(--backcolor);
+    border-radius: 8px;
+    padding-left: 3px;
+    min-height: 25px;
+}
+
+.date{
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    color: var(--date-color);
+}

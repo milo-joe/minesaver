@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <script defer src="client.js"></script>
+
+    <title>Document</title>
+</head>
+<body>
+    <form action="" id="form-container">
+        <div id="input-holder">
+            <input type="text" id="pos" placeholder="position">
+            <button type="submit" id="sub-btn"> Add</button>
+        </div>
+        <input type="text" id="desc" placeholder="description">
+    </form>
+
+    <div class="container">
+
+        <% pos.forEach(element => { %>
+            <div class="item-container">
+                <div class="row">
+
+                    <p class="pos"> <%= element.pos %>  </p>    
+                    <p class="date"> <%= new Date(element.date).toISOString().replace("T"," ") %>  </p>    
+                </div>
+                <p class="desc"> <%= (element.desc=== "")?  "no description": element.desc   %>  </p>    
+            </div>
+            
+        <% }); %> 
+    </div>
+    
+
+
+</body>
+</html>
