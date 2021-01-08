@@ -21,9 +21,18 @@ form.addEventListener('submit', async e=>{
         body: JSON.stringify(data)
     };
 
-    const req = await fetch('http://localhost:3000/', options);
+    const req = await fetch('http://25.111.155.221:3000/', options);
 
 });
+
+
+async function removeItem(e){
+
+    const req = await fetch(`http://25.111.155.221:3000/${e}`, {
+        method: 'PUT'
+    });
+
+}
 
 
 

@@ -17,9 +17,9 @@ body{
     background-color: var(--conatiner);
     display: flex;
     flex-direction: column;
-    position: fixed;
     border: 0;
     border-radius: 5px;
+    margin: auto;
 }
 
 input{
@@ -50,9 +50,9 @@ input:focus{
     margin: auto;
     margin-top: 18px;
     background-color: var(--conatiner);
-    width: 40%;
-    border: 1px solid brown;
+    width: 400px;    border: 1px solid brown;
     border-radius: 8px;
+    padding: 8px;
 
 }
 
@@ -82,7 +82,7 @@ input:focus{
 
 .desc{
     margin: 5px auto;
-    width: 400px;
+    width: 380px;
     background-color: var(--backcolor);
     border-radius: 8px;
     padding-left: 3px;
@@ -91,7 +91,16 @@ input:focus{
 
 .date{
     position: absolute;
-    top: 5px;
+    top: 0px;
     right: 5px;
     color: var(--date-color);
+}
+
+.delete-button{
+    position: absolute;
+    height: 25px;
+    width: 25px;
+    right: 8px;
+    top: 45px;
+
 }

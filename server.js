@@ -1,6 +1,6 @@
+const { json } = require('express');
 const express = require('express');
 const app = express();
-//const router = express.Router();
 
 const DataStore = require('nedb');
 const database = new DataStore('database.db');
@@ -38,24 +38,22 @@ app.post('/', (req, res) => {
             res.send(err); 
             return console.log('ERROR: while inserting data in db');
         }
-        
-        // database.find({}).sort({date:-1}).exec((err, data) =>{
-        //     if(err){
-        //         console.log('ERROR: failed to load data from server!');
-        //         return res.send(err);
-        //     } 
-            
-        //     console.log('data added to db');
-        //     app.render('index', {pos: data});    
-
-        // });
-
-      
     });
 
 });
 
+app.put('/:e', (req, res) => {
+    database.remove({pos: req.params.e}, {}, (err, num)=>{
+        if(err){
+            console.log(`cannot delete item: ${req.params.e}`);
+            return res.send(err);
+        }
+        database.persistence.compactDatafile();
 
+    })
+
+
+});
 
 
 app.listen(3000, ()=>{

@@ -19,7 +19,9 @@
     <div class="container">
 
         <% pos.forEach(element => { %>
+
             <div class="item-container">
+                <img src="delete.png" class="delete-button"  onclick="removeItem('<%= element.pos %>' )" />
                 <div class="row">
 
                     <p class="pos"> <%= element.pos %>  </p>    
